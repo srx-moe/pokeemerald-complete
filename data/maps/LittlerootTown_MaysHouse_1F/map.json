@@ -115,15 +115,15 @@
       "x": 1,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_PETALBURG_CITY",
+      "dest_warp_id": "4"
     },
     {
       "x": 2,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_PETALBURG_CITY",
+      "dest_warp_id": "4"
     },
     {
       "x": 2,
@@ -139,7 +139,7 @@
       "x": 2,
       "y": 8,
       "elevation": 0,
-      "var": "VAR_LITTLEROOT_INTRO_STATE",
+      "var": "VAR_PETALBURG_INTRO_STATE",
       "var_value": "4",
       "script": "LittlerootTown_MaysHouse_1F_EventScript_GoSeeRoom"
     },
