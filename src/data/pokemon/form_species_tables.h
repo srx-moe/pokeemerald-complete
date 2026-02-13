@@ -226,6 +226,9 @@ static const u16 sGrowlitheFormSpeciesIdTable[] = {
 #if P_HISUIAN_FORMS
     SPECIES_GROWLITHE_HISUI,
 #endif
+#if P_HOENNIAN_FORMS
+    SPECIES_GROWLITHE_HOENNIAN,
+#endif
     FORM_SPECIES_END,
 };
 
@@ -233,6 +236,9 @@ static const u16 sArcanineFormSpeciesIdTable[] = {
     SPECIES_ARCANINE,
 #if P_HISUIAN_FORMS
     SPECIES_ARCANINE_HISUI,
+#endif
+#if P_HOENNIAN_FORMS
+    SPECIES_ARCANINE_HOENNIAN,
 #endif
     FORM_SPECIES_END,
 };

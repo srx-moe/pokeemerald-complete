@@ -103,7 +103,7 @@ InsideOfTruck_EventScript_SetIntroFlagsMale::
 # 52 "data/maps/InsideOfTruck/scripts.pory"
 	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
 # 53 "data/maps/InsideOfTruck/scripts.pory"
-	setvar VAR_PETALBURG_INTRO_STATE, 1
+	setvar VAR_PETALBURG_INTRO_STATE, 2
 # 54 "data/maps/InsideOfTruck/scripts.pory"
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MOM
 # 55 "data/maps/InsideOfTruck/scripts.pory"

@@ -61,31 +61,31 @@ PetalburgCity_OnTransition:
 # 31 "data/maps/PetalburgCity/scripts.pory"
 PetalburgCity_OnFrame::
 # 32 "data/maps/PetalburgCity/scripts.pory"
-	map_script_2 VAR_PETALBURG_INTRO_STATE, 2, PetalburgCity_EventScript_StepOffTruck
+	map_script_2 VAR_PETALBURG_INTRO_STATE, 1, PetalburgCity_EventScript_StepOffTruck
 # 33 "data/maps/PetalburgCity/scripts.pory"
-	map_script_2 VAR_PETALBURG_CITY_STATE, 2, PetalburgCity_EventScript_WallyTutorial
+	map_script_2 VAR_PETALBURG_INTRO_STATE, 2, PetalburgCity_EventScript_StepOffTruck
 # 34 "data/maps/PetalburgCity/scripts.pory"
-	map_script_2 VAR_PETALBURG_CITY_STATE, 4, PetalburgCity_EventScript_WalkToWallyHouse
+	map_script_2 VAR_PETALBURG_CITY_STATE, 2, PetalburgCity_EventScript_WallyTutorial
 # 35 "data/maps/PetalburgCity/scripts.pory"
-	.2byte 0
+	map_script_2 VAR_PETALBURG_CITY_STATE, 4, PetalburgCity_EventScript_WalkToWallyHouse
 # 36 "data/maps/PetalburgCity/scripts.pory"
-
+	.2byte 0
 # 37 "data/maps/PetalburgCity/scripts.pory"
-// Event Scripts
+
 # 38 "data/maps/PetalburgCity/scripts.pory"
-PetalburgCity_EventScript_StepOffTruck::
+// Event Scripts
 # 39 "data/maps/PetalburgCity/scripts.pory"
-	lockall
+PetalburgCity_EventScript_StepOffTruck::
 # 40 "data/maps/PetalburgCity/scripts.pory"
-	setvar VAR_0x8004, 20
+	lockall
 # 41 "data/maps/PetalburgCity/scripts.pory"
-	setvar VAR_0x8005, 24
+	setvar VAR_0x8004, 20
 # 42 "data/maps/PetalburgCity/scripts.pory"
-	call PetalburgCity_EventScript_GoInsideWithDad
+	setvar VAR_0x8005, 24
 # 43 "data/maps/PetalburgCity/scripts.pory"
-	// call FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
+	call PetalburgCity_EventScript_GoInsideWithDad
 # 44 "data/maps/PetalburgCity/scripts.pory"
-	warpsilent MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F, 2, 8
+	warpsilent MAP_PETALBURG_CITY_PLAYERS_HOUSE_1F, 2, 8
 # 45 "data/maps/PetalburgCity/scripts.pory"
 	waitstate
 # 46 "data/maps/PetalburgCity/scripts.pory"
@@ -121,9 +121,9 @@ PetalburgCity_EventScript_GoInsideWithDad::
 # 61 "data/maps/PetalburgCity/scripts.pory"
 	delay 10
 # 62 "data/maps/PetalburgCity/scripts.pory"
-	applymovement LOCALID_PETALBURG_DAD, PetalburgCity_Movement_DadApproachPlayerAtTruck
+	// applymovement LOCALID_PETALBURG_DAD, PetalburgCity_Movement_DadApproachPlayerAtTruck
 # 63 "data/maps/PetalburgCity/scripts.pory"
-	waitmovement 0
+	// waitmovement 0
 # 64 "data/maps/PetalburgCity/scripts.pory"
 	msgbox LittlerootTown_Text_OurNewHomeLetsGoInside, MSGBOX_DEFAULT
 # 65 "data/maps/PetalburgCity/scripts.pory"
@@ -205,11 +205,11 @@ PetalburgCity_Movement_DadExitHouse:
 # 103 "data/maps/PetalburgCity/scripts.pory"
 
 # 104 "data/maps/PetalburgCity/scripts.pory"
-PetalburgCity_Movement_DadApproachPlayerAtTruck:
+// PetalburgCity_Movement_DadApproachPlayerAtTruck:
 # 105 "data/maps/PetalburgCity/scripts.pory"
-	walk_in_place_faster_left
+// 	walk_in_place_faster_left
 # 106 "data/maps/PetalburgCity/scripts.pory"
-	step_end
+// 	step_end
 # 107 "data/maps/PetalburgCity/scripts.pory"
 
 # 108 "data/maps/PetalburgCity/scripts.pory"

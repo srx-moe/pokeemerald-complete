@@ -7396,7 +7396,8 @@ bool32 IsSpeciesRegionalForm(u32 species)
     return gSpeciesInfo[species].isAlolanForm
         || gSpeciesInfo[species].isGalarianForm
         || gSpeciesInfo[species].isHisuianForm
-        || gSpeciesInfo[species].isPaldeanForm;
+        || gSpeciesInfo[species].isPaldeanForm
+        || gSpeciesInfo[species].isHoennianForm;
 }
 
 bool32 IsSpeciesRegionalFormFromRegion(u32 species, u32 region)
@@ -7407,6 +7408,7 @@ bool32 IsSpeciesRegionalFormFromRegion(u32 species, u32 region)
     case REGION_GALAR:  return gSpeciesInfo[species].isGalarianForm;
     case REGION_HISUI:  return gSpeciesInfo[species].isHisuianForm;
     case REGION_PALDEA: return gSpeciesInfo[species].isPaldeanForm;
+    case REGION_HOENN:  return gSpeciesInfo[species].isHoennianForm;
     default:            return FALSE;
     }
 }

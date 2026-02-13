@@ -1163,3 +1163,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/dexnav.inc"
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
+
+	.include "data/maps/PetalburgCity_PlayersHouse_2F/scripts.inc"
+
+	.include "data/maps/PetalburgCity_PlayersHouse_1F/scripts.inc"

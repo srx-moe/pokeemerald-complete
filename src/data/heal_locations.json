@@ -21,6 +21,16 @@
       "respawn_y": 7
     },
     {
+      "id": "HEAL_LOCATION_PETALBURG_CITY_PLAYER_HOUSE_2F",
+      "map": "MAP_PETALBURG_CITY_PLAYERS_HOUSE_2F",
+      "x": 20,
+      "y": 17,
+      "respawn_map": "MAP_PETALBURG_CITY_PLAYERS_HOUSE_1F",
+      "respawn_npc": "LOCALID_PLAYERS_HOUSE_1F_DAD",
+      "respawn_x": 8,
+      "respawn_y": 7
+    },
+    {
       "id": "HEAL_LOCATION_PETALBURG_CITY",
       "map": "MAP_PETALBURG_CITY",
       "x": 20,

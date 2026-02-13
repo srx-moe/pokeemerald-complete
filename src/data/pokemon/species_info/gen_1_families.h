@@ -7997,6 +7997,141 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .formSpeciesIdTable = sArcanineFormSpeciesIdTable,
     },
 #endif //P_HISUIAN_FORMS
+
+#if P_HOENNIAN_FORMS
+    [SPECIES_GROWLITHE_HOENNIAN] =
+    {
+        .baseHP        = 55,
+        .baseAttack    = 60,
+        .baseDefense   = 70,
+        .baseSpeed     = 45,
+        .baseSpAttack  = 50,
+        .baseSpDefense = 50,
+        .types = MON_TYPES(TYPE_FIRE, TYPE_STEEL),
+        .catchRate = 190,
+        .expYield = 70,
+        .evYield_Attack = 1,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 20,
+        .friendship = 0,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_FLAME_BODY, ABILITY_FLASH_FIRE, ABILITY_ROCK_HEAD },
+        .bodyColor = BODY_COLOR_BROWN,
+        .speciesName = _("Growlithe"),
+        .cryId = CRY_GROWLITHE,
+        .natDexNum = NATIONAL_DEX_GROWLITHE,
+        .categoryName = _("Forge"),
+        .height = 8,
+        .weight = 454, 
+        .description = COMPOUND_STRING(
+            "It stores molten heat in its metallic hide.\n"
+            "When threatened, its body glows white-hot,\n"
+            "forcing predators to keep their distance."),
+        .pokemonScale = 346,
+        .pokemonOffset = 14,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_GrowlitheHisui,
+        .frontPicSize = MON_COORDS_SIZE(48, 48),
+        .frontPicYOffset = 11,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_GrowlitheHisui,
+        .backPicSize = MON_COORDS_SIZE(56, 56),
+        .backPicYOffset = 8,
+        //.backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_GrowlitheHisui,
+        .shinyPalette = gMonShinyPalette_GrowlitheHisui,
+        .iconSprite = gMonIcon_GrowlitheHisui,
+        .iconPalIndex = 0,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(2, -2, SHADOW_SIZE_M)
+        FOOTPRINT(Growlithe)
+        OVERWORLD(
+            sPicTable_GrowlitheHisui,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_GrowlitheHisui,
+            gShinyOverworldPalette_GrowlitheHisui
+        )
+        .isHoennianForm = TRUE,
+        .levelUpLearnset = sGrowlitheHisuiLevelUpLearnset,
+        .teachableLearnset = sGrowlitheHisuiTeachableLearnset,
+        .formSpeciesIdTable = sGrowlitheFormSpeciesIdTable,
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_FIRE_STONE, SPECIES_ARCANINE_HISUI}),
+    },
+
+    [SPECIES_ARCANINE_HOENNIAN] =
+    {
+        .baseHP        = 90,
+        .baseAttack    = 90,
+        .baseDefense   = 120,
+        .baseSpeed     = 70,
+        .baseSpAttack  = 80,
+        .baseSpDefense = 80,
+        .types = MON_TYPES(TYPE_FIRE, TYPE_STEEL),
+        .catchRate = 75,
+        .expYield = 194,
+        .evYield_Attack = 2,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 20,
+        .friendship = 0,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_FLAME_BODY, ABILITY_FLASH_FIRE, ABILITY_ROCK_HEAD },
+        .bodyColor = BODY_COLOR_BROWN,
+        .speciesName = _("Arcanine"),
+        .cryId = CRY_ARCANINE,
+        .natDexNum = NATIONAL_DEX_ARCANINE,
+        .categoryName = _("Furnace"),
+        .height = 20,
+        .weight = 4540,
+        .description = COMPOUND_STRING(
+            "Its body burns so hot that rain will\n"
+            "evaporate before touching its body.\n"
+            "The ancient people of Hoenn revered it as\n"
+            "a spirit of the forge."),
+        .pokemonScale = 256,
+        .pokemonOffset = 1,
+        .trainerScale = 312,
+        .trainerOffset = 4,
+        .frontPic = gMonFrontPic_ArcanineHisui,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_ArcanineHisui,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 3,
+        //.backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_ArcanineHisui,
+        .shinyPalette = gMonShinyPalette_ArcanineHisui,
+        .iconSprite = gMonIcon_ArcanineHisui,
+        .iconPalIndex = 0,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(-1, 11, SHADOW_SIZE_XL_BATTLE_ONLY)
+        FOOTPRINT(Arcanine)
+        OVERWORLD(
+            sPicTable_ArcanineHisui,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_ArcanineHisui,
+            gShinyOverworldPalette_ArcanineHisui
+        )
+        .isHoennianForm = TRUE,
+        .levelUpLearnset = sArcanineHisuiLevelUpLearnset,
+        .teachableLearnset = sArcanineHisuiTeachableLearnset,
+        .formSpeciesIdTable = sArcanineFormSpeciesIdTable,
+    },
+#endif //P_HOENNIAN_FORMS
+
+        
+
 #endif //P_FAMILY_GROWLITHE
 
 #if P_FAMILY_POLIWAG

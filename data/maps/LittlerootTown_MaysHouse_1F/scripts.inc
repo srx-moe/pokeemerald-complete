@@ -3,11 +3,11 @@
 # 2 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
 LittlerootTown_MaysHouse_1F_MapScripts::
 # 3 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	map_script MAP_SCRIPT_ON_LOAD, LittlerootTown_MaysHouse_1F_OnLoad
+	// map_script MAP_SCRIPT_ON_LOAD, LittlerootTown_MaysHouse_1F_OnLoad
 # 4 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_MaysHouse_1F_OnTransition
+	// map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_MaysHouse_1F_OnTransition
 # 5 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_MaysHouse_1F_OnFrame
+	// map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_MaysHouse_1F_OnFrame
 # 6 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
 	.byte 0
 # 7 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
@@ -15,81 +15,81 @@ LittlerootTown_MaysHouse_1F_MapScripts::
 # 8 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
 LittlerootTown_MaysHouse_1F_OnLoad:
 # 9 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	call_if_lt VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_MaysHouse_1F_EventScript_SetMovingBoxes
+	// call_if_lt VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_MaysHouse_1F_EventScript_SetMovingBoxes
 # 10 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	call_if_set FLAG_RECEIVED_RUNNING_SHOES, LittlerootTown_MaysHouse_1F_EventScript_CheckShowShoesManual
+	// call_if_set FLAG_RECEIVED_RUNNING_SHOES, LittlerootTown_MaysHouse_1F_EventScript_CheckShowShoesManual
 # 11 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
 	end
 # 12 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
 
 # 13 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-LittlerootTown_MaysHouse_1F_EventScript_SetMovingBoxes::
+// LittlerootTown_MaysHouse_1F_EventScript_SetMovingBoxes::
 # 14 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	setmetatile 5, 4, METATILE_BrendansMaysHouse_MovingBox_Open, TRUE
+// 	setmetatile 5, 4, METATILE_BrendansMaysHouse_MovingBox_Open, TRUE
 # 15 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	setmetatile 5, 2, METATILE_BrendansMaysHouse_MovingBox_Closed, TRUE
+// 	setmetatile 5, 2, METATILE_BrendansMaysHouse_MovingBox_Closed, TRUE
 # 16 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	return
+// 	return
 # 17 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
 
 # 18 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-LittlerootTown_MaysHouse_1F_EventScript_CheckShowShoesManual::
+// LittlerootTown_MaysHouse_1F_EventScript_CheckShowShoesManual::
 # 19 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	checkplayergender
+// 	checkplayergender
 # 20 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	goto_if_eq VAR_RESULT, FEMALE, LittlerootTown_MaysHouse_1F_EventScript_ShowRunningShoesManual
+// 	goto_if_eq VAR_RESULT, FEMALE, LittlerootTown_MaysHouse_1F_EventScript_ShowRunningShoesManual
 # 21 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	return
+// 	return
 # 22 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
 
 # 23 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-LittlerootTown_MaysHouse_1F_EventScript_ShowRunningShoesManual::
+// LittlerootTown_MaysHouse_1F_EventScript_ShowRunningShoesManual::
 # 24 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	setmetatile 6, 7, METATILE_BrendansMaysHouse_BookOnTable, TRUE
+// 	setmetatile 6, 7, METATILE_BrendansMaysHouse_BookOnTable, TRUE
 # 25 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	return
+// 	return
 # 26 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
 
 # 27 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-LittlerootTown_MaysHouse_1F_OnTransition:
+// LittlerootTown_MaysHouse_1F_OnTransition:
 # 28 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 3, LittlerootTown_MaysHouse_1F_EventScript_MoveMomToDoor
+// 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 3, LittlerootTown_MaysHouse_1F_EventScript_MoveMomToDoor
 # 29 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_MaysHouse_1F_EventScript_MoveMomToStairs
+// 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_MaysHouse_1F_EventScript_MoveMomToStairs
 # 30 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_MaysHouse_1F_EventScript_MoveMomToTV
+// 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_MaysHouse_1F_EventScript_MoveMomToTV
 # 31 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	end
+// 	end
 # 32 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
 
 # 33 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-LittlerootTown_MaysHouse_1F_EventScript_MoveMomToStairs::
+// LittlerootTown_MaysHouse_1F_EventScript_MoveMomToDoor::
 # 34 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	setobjectxyperm LOCALID_PLAYERS_HOUSE_1F_MOM, 2, 4
+// 	setobjectxyperm LOCALID_PLAEYRS_HOUSE_1F_MOM, 1, 8
 # 35 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	setobjectmovementtype LOCALID_PLAYERS_HOUSE_1F_MOM, MOVEMENT_TYPE_FACE_UP
+// 	setobjectmovementtype LOCALID_PLAYERS_HOUSE_1F_MOM, MOVEMENT_TYPE_FACE_UP
 # 36 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	return
+// 	return
 # 37 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
 
 # 38 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-LittlerootTown_MaysHouse_1F_EventScript_MoveMomToTV::
+// LittlerootTown_MaysHouse_1F_EventScript_MoveMomToStairs::
 # 39 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	setobjectxyperm LOCALID_PLAYERS_HOUSE_1F_MOM, 6, 5
+// 	setobjectxyperm LOCALID_PLAYERS_HOUSE_1F_MOM, 2, 4
 # 40 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	setobjectmovementtype LOCALID_PLAYERS_HOUSE_1F_MOM, MOVEMENT_TYPE_FACE_UP
+// 	setobjectmovementtype LOCALID_PLAYERS_HOUSE_1F_MOM, MOVEMENT_TYPE_FACE_UP
 # 41 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	return
+// 	return
 # 42 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
 
 # 43 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-LittlerootTown_MaysHouse_1F_EventScript_MoveMomToDoor::
+// LittlerootTown_MaysHouse_1F_EventScript_MoveMomToTV::
 # 44 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	setobjectxyperm LOCALID_PLAYERS_HOUSE_1F_MOM, 1, 8
+// 	setobjectxyperm LOCALID_PLAEYRS_HOUSE_1F_MOM, 6, 5
 # 45 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	setobjectmovementtype LOCALID_PLAYERS_HOUSE_1F_MOM, MOVEMENT_TYPE_FACE_UP
+// 	setobjectmovementtype LOCALID_PLAEYRS_HOUSE_1F_MOM, MOVEMENT_TYPE_FACE_UP
 # 46 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
-	return
+// 	return
 # 47 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"
 
 # 48 "data/maps/LittlerootTown_MaysHouse_1F/scripts.pory"

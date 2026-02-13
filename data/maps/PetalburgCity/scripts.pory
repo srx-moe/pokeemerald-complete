@@ -29,6 +29,7 @@ PetalburgCity_OnTransition:
 	end
 
 PetalburgCity_OnFrame::
+	map_script_2 VAR_PETALBURG_INTRO_STATE, 1, PetalburgCity_EventScript_StepOffTruck
 	map_script_2 VAR_PETALBURG_INTRO_STATE, 2, PetalburgCity_EventScript_StepOffTruck
 	map_script_2 VAR_PETALBURG_CITY_STATE, 2, PetalburgCity_EventScript_WallyTutorial
 	map_script_2 VAR_PETALBURG_CITY_STATE, 4, PetalburgCity_EventScript_WalkToWallyHouse
@@ -40,7 +41,7 @@ PetalburgCity_EventScript_StepOffTruck::
 	setvar VAR_0x8004, 20
 	setvar VAR_0x8005, 24
 	call PetalburgCity_EventScript_GoInsideWithDad
-	warpsilent MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F, 2, 8
+	warpsilent MAP_PETALBURG_CITY_PLAYERS_HOUSE_1F, 2, 8
 	waitstate
 	releaseall
 	end
@@ -58,8 +59,8 @@ PetalburgCity_EventScript_GoInsideWithDad::
 	closedoor VAR_0x8004, VAR_0x8005
 	waitdooranim
 	delay 10
-	applymovement LOCALID_PETALBURG_DAD, PetalburgCity_Movement_DadApproachPlayerAtTruck
-	waitmovement 0
+	// applymovement LOCALID_PETALBURG_DAD, PetalburgCity_Movement_DadApproachPlayerAtTruck
+	// waitmovement 0
 	msgbox LittlerootTown_Text_OurNewHomeLetsGoInside, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_PETALBURG_DAD, PetalburgCity_Movement_DadApproachDoor
@@ -100,9 +101,9 @@ PetalburgCity_Movement_DadExitHouse:
 	walk_left
 	step_end
 
-PetalburgCity_Movement_DadApproachPlayerAtTruck:
-	walk_in_place_faster_left
-	step_end
+// PetalburgCity_Movement_DadApproachPlayerAtTruck:
+// 	walk_in_place_faster_left
+// 	step_end
 
 PetalburgCity_Movement_DadApproachDoor:
 	delay_16
